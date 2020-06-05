@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  #apache-server
+  webserver:
+    build: ./apache
+    restart: always
+    ports:
+      - "8081:8081"
+  #MySQL Service
+  db:
+    build: ./db
+    restart: always
+    ports:
+      - "3306:3306"
